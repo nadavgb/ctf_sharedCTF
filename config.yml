@@ -1,0 +1,27 @@
+challenge:
+  id: CTF001
+  title: The Cyber Vault
+  description: A multi-level challenge to uncover, exploit, and patch common security vulnerabilities in a simulated system.
+  category: Security
+  difficulty: Intermediate
+  type: Code Challenge
+  rules: No brute forcing, respect other participants, no sharing solutions, etc.
+  flags:
+    - id: {{ FLAG }}
+      description: Find the hidden API secret in the code.
+      reward_points: 100
+    - id: Flag2
+      description: Utilize the API secret to retrieve a file through IDOR and login to the user account using the obtained credentials.
+      reward_points: 100
+    - id: Flag3
+      description: Execute a successful stored XSS attack to steal the admin cookie.
+      reward_points: 200
+    - id: Flag4
+      description: Utilize Server Side Request Forgery (SSRF) to retrieve source code files.
+      reward_points: 200
+    - id: Flag5
+      description: Exploit an insecure deserialization API to achieve Remote Code Execution (RCE) and Steal AWS credentials from the metadata URL.
+      reward_points: 400
+metadata:
+  creator:
+    username: nadav
